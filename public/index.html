@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alhasan Private Cinema</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- Global Lights -->
+  <div class="cinema-spotlights">
+    <div class="spot s1"></div>
+    <div class="spot s2"></div>
+    <div class="spot s3"></div>
+    <div class="spot s4"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Alhasan Private Cinema</h1>
+    <h4>Movies Library</h4>
+
+    <div class="search-box">
+      <input type="text" id="movieSearch" placeholder="Search movies...">
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <button id="toggleCtrl"
+  style="position:fixed;bottom:20px;left:20px;z-index:9999">
+  Disable Control
+</button>
+  </header>
+
+  <!-- Filters -->
+  <section class="advanced-filters">
+    <select id="genre">
+      <option value="">Genre</option>
+      <option value="28">Action</option>
+      <option value="35">Comedy</option>
+      <option value="18">Drama</option>
+      <option value="10751">Family</option>
+      <option value="ar">Arabic</option>
+    </select>
+
+    <input type="number" id="year" placeholder="Release Year">
+    <input type="text" id="actor" placeholder="Actor name">
+
+    <button id="advancedSearchBtn">Search</button>
+  </section>
+
+  <!-- Content -->
+  <main>
+    <div id="moviesContainer" class="movies-container"></div>
+
+    <div id="sliderContainer" class="slider-container"></div>
+
+    <div class="slider-controls">
+      <button class="prev">⏪ Prev</button>
+      <button class="next">Next ⏩</button>
+    </div>
+  </main>
+<script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

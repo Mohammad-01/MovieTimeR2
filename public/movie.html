@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="movie.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="bg-gradient"></div>
+
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <div class="logo">Alhasan Private Cinema</div>
+      <nav class="nav">
+        <button id="backBtn" class="btn btn-primary">
+          <span class="btn-glow"></span>
+          Back to Home
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <section class="movie-hero card-xxl">
+      <div class="hero-grid">
+
+        <!-- Poster -->
+        <div class="hero-media poster-wrap">
+          <div class="ratio ratio-2x3 media-frame skeleton">
+            <img id="moviePoster" alt="Movie Poster" />
+          </div>
+          <div class="meta-badges">
+            <span class="badge" id="badgeYear">—</span>
+            <span class="badge badge-accent" id="badgeRating">★ —</span>
+            <span class="badge" id="badgeRuntime">—</span>
+          </div>
+        </div>
+
+        <!-- Trailer + Player -->
+        <div class="hero-media trailer-wrap">
+
+          <!-- Trailer -->
+          <div class="ratio ratio-16x9 media-frame skeleton" id="trailerWrap">
+            <iframe
+              id="movieTrailer"
+              src=""
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Watch Button -->
+          <div class="watch-actions">
+            <button id="watchNowBtn" class="btn-watch">
+              Watch Now ▶
+            </button>
+          </div>
+
+          <!-- Real Video Player -->
+          <div id="moviePlayerWrap" style="display:none; margin-top:16px;">
+            <video
+              id="moviePlayer"
+              controls
+              autoplay
+              preload="metadata"
+              style="width:100%; border-radius:16px;"
+            >
+              <source id="movieSource" src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <h1 id="movieTitle" class="title-xxl">Movie Title</h1>
+        <p id="movieSummary" class="lead"></p>
+      </div>
+    </section>
+
+    <section class="card-xl">
+      <h2 class="section-title">Movie Details</h2>
+      <div id="movieDetails" class="details-grid"></div>
+    </section>
+
+    <section class="card-xl">
+      <div class="section-header">
+        <h2 class="section-title">Cast</h2>
+        <div class="section-hint">Click a cast member to search on Google</div>
+      </div>
+      <ul id="movieCast" class="cast-grid"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="foot-note">© <span id="year"></span> Movies+. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="movie.js"></script>
+</body>
+</html>
