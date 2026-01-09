@@ -32,35 +32,6 @@ const advancedSearchBtn = document.getElementById('advancedSearchBtn');
 /**************************************************
  * SOCKET SETUP
  **************************************************/
-if (MODE === 'display') {
-  socket.emit('join-display');
-
-  socket.on('display-ready', ({ qr }) => {
-    const qrBox = document.createElement('div');
-    qrBox.style.cssText = `
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      background:#111;
-      padding:14px;
-      border-radius:14px;
-      z-index:9999;
-      text-align:center;
-    `;
-    qrBox.innerHTML = `
-      <img src="${qr}" style="width:140px">
-      <div style="color:#aaa;margin-top:6px;font-size:12px">
-        Scan to control
-      </div>
-    `;
-    document.body.appendChild(qrBox);
-  });
-
-  socket.on('select-movie', ({ movieId }) => {
-  openMovie(movieId);
-});
-
-}
 
 if (MODE === 'controller' && ROOM) {
   socket.emit('join-controller', { room: ROOM });
