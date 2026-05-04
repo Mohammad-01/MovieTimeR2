@@ -94,7 +94,6 @@ watchBtn?.addEventListener('click', () => {
     .replace(/-+/g, '-');
 
   const watchUrl = `https://vidsrcme.ru/embed/movie?tmdb=${movie.id}`;
-`;
 
   // استبدال التريلر بالفيديو
   movieTrailer.src = '';
