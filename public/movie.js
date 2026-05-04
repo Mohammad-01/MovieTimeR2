@@ -1,6 +1,7 @@
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
 // عناصر الصفحة
+const fsBtn = document.getElementById('customFullscreenBtn');
 const movieTitleEl = document.getElementById('movieTitle');
 const movieSummary = document.getElementById('movieSummary');
 const movieCast = document.getElementById('movieCast');
@@ -103,4 +104,25 @@ watchBtn?.addEventListener('click', () => {
 
   // إخفاء زر المشاهدة
   watchBtn.style.display = 'none';
+  
+  // ✅ أظهر زر الفول سكرين
+  fsBtn.style.display = 'block';
+});
+
+fsBtn?.addEventListener('click', () => {
+  trailerWrap.classList.add('player-fullscreen');
+  document.body.style.overflow = 'hidden';
+
+  // زر خروج
+  const exitBtn = document.createElement('button');
+  exitBtn.innerText = '✕ Exit';
+  exitBtn.className = 'exit-fs';
+
+  trailerWrap.appendChild(exitBtn);
+
+  exitBtn.addEventListener('click', () => {
+    trailerWrap.classList.remove('player-fullscreen');
+    document.body.style.overflow = 'auto';
+    exitBtn.remove();
+  });
 });
