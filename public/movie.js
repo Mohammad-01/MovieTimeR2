@@ -93,7 +93,7 @@ watchBtn?.addEventListener('click', () => {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
 
-  const watchUrl = `<iframe src="https://vidsrcme.ru/embed/movie?tmdb=${movie.id}" style="width: 100%; height: 100%;" frameborder="0" referrerpolicy="origin" allowfullscreen></iframe>
+  const watchUrl = `https://vidsrcme.ru/embed/movie?tmdb=${movie.id}`;
 `;
 
   // استبدال التريلر بالفيديو
