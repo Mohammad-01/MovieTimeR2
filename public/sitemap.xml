@@ -3,37 +3,16 @@
 
   <!-- الصفحة الرئيسية -->
   <url>
-    <loc>https://yourdomain.com/</loc>
-    <changefreq>daily</changefreq>
+    <loc>https://private-cinema-rosy.vercel.app/</loc>
     <priority>1.0</priority>
-  </url>
-
-  <!-- صفحة الأفلام -->
-  <url>
-    <loc>https://yourdomain.com/movies</loc>
     <changefreq>daily</changefreq>
+  </url>
+
+  <!-- صفحة الفيلم -->
+  <url>
+    <loc>https://private-cinema-rosy.vercel.app/movie.html</loc>
     <priority>0.9</priority>
-  </url>
-
-  <!-- صفحة المسلسلات -->
-  <url>
-    <loc>https://yourdomain.com/series</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- صفحة فيلم مثال -->
-  <url>
-    <loc>https://yourdomain.com/movie/spiderman-2024</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- صفحة بحث -->
-  <url>
-    <loc>https://yourdomain.com/search</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>
 
 </urlset>
